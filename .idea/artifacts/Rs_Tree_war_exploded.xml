@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Rs_Tree:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Rs_Tree_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Rs_Tree/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Rs_Tree" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/Rs_Tree/web/WEB-INF/lib/jackson-all-1.9.11.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

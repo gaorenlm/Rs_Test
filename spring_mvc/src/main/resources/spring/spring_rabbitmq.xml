@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:rabbit="http://www.springframework.org/schema/rabbit"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/rabbit
+           http://www.springframework.org/schema/rabbit/spring-rabbit-1.0.xsd">
+
+    <!--消息队列资源文件-->
+    <context:property-placeholder location="classpath:properties/cloud_base.properties" file-encoding="UTF-8"/>
+
+    <!--消息队列服务地址-->
+    <rabbit:connection-factory id="connectionFactory" host="localhost" username="guest" password="guest" port="5672"  />
+
+
+    <!--?-->
+    <rabbit:admin connection-factory="connectionFactory" auto-startup="true"/>
+
+
+
+
+</beans>
